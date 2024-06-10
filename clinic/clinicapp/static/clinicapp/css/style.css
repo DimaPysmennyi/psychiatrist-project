@@ -3,7 +3,7 @@
 
 body{
     margin: 0;
-    /* padding: 0; */
+    background-color: #FFFCE1;
 }
 
 header{
@@ -16,6 +16,10 @@ header{
     justify-content: space-between;
     gap: 80px;
     align-items: center;
+    text-align: center;
+}
+
+.faq-h1{
     text-align: center;
 }
 
@@ -49,4 +53,202 @@ header a{
 
 .links a:hover{
     color: #8B8B8B;
+}
+
+.img-main{
+    height: 700px;
+}
+
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+}
+
+.main-p{
+    font-family: 'Krub';
+    font-size: 20px;
+    font-style: italic;
+    /* font-weight: 200; */
+
+}
+
+.headline{
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.accordion{
+    background-color:#FFFCE1;
+}
+
+.find-service{
+    width: 385px;
+    height: 70px;
+    outline: none;
+    border: none;
+    /* font-family: "Krub"; */
+    /* font-weight: 500; */
+    font-size: 24px;
+    background-color: #FFEFB7;
+    transition: background-color 0.2s;
+}
+
+.find-service:hover{
+    background-color: #CCB668;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.path-history-div{
+    width: 100%;
+    height: 750px;
+    background-color: white;
+}
+
+.path-container{
+    /* width: 100%; */
+    height: 100%;
+}
+
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF9C8;
+    flex-direction: column;
+    height: 100%;
+}
+
+h2{
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.container-row{
+    width: 100%;
+}
+
+.path-p{
+    font-family: 'Krub';
+    font-size: 32px;
+    text-align: center
+}
+
+.path-p-2{
+    font-family: 'Krub';
+    font-size: 30px;
+    text-align: center;
+}
+
+.block-path{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDAA3;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.wrapper{
+    width:  850px; 
+    height: 700px;
+    padding: 10px;
+    background-color: #FFE39C; 
+    border: 3px solid rgba(0, 0, 0, 0.5); 
+    margin: auto; 
+    text-align: center;
+}
+
+.h2_form{
+    text-align: center; 
+    font-family: 'Comfortaa';
+    font-size: 40px;
+}
+.errorlist li {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: red;
+    font-family: 'Krub';
+}
+
+.errorlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-family: 'Krub';
+    outline: none;
+    border: 1px black solid;
+    width: 635px;
+    height: 80px;
+    padding: 10px 50px 10px 10px;
+    font-size: 32px;
+    /* color: rgba(0, 0, 0, 0.45); */
+}
+
+.btn-form{
+    background-color: #FFB979;
+    font-family: 'Krub';
+    font-size: 32px;
+    width: 550px;
+    height: 110px;
+    border: 1px solid black;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+.btn-form:hover{
+    background-color: #F6A356;
+}
+
+.goal-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #E0FFFF;
+    height: 750px;
+}
+
+.goal-h2{
+    font-family: 'Comfortaa';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.goal-p{
+    font-family: 'Krub';
+    font-size: 32px;
+    text-align: center;
+}
+
+.goal-button{
+    width: 385px;
+    height: 70px;
+    outline: none;
+    border: none;
+    /* font-family: "Krub"; */
+    /* font-weight: 500; */
+    font-size: 24px;
+    background-color: #7CFFF7;
+    transition: all 0.2s;
+}
+
+.goal-button:hover{
+    background-color: #307975;
+    color: white;
 }
