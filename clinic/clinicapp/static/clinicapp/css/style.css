@@ -158,8 +158,12 @@ h2{
 
 
 .wrapper{
-    width:  850px; 
-    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 850px; 
+    height: 750px;
     padding: 10px;
     background-color: #FFE39C; 
     border: 3px solid rgba(0, 0, 0, 0.5); 
@@ -251,4 +255,59 @@ h2{
 .goal-button:hover{
     background-color: #307975;
     color: white;
+}
+
+.accordion-div{
+    display: flex;
+    justify-content: center;
+}
+
+.accordion{
+    width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+
+.accordion-text{
+    font-family: 'Comfortaa';
+    font-size: 20px;
+}
+
+.accordion-button{
+    font-size: 32px;
+}
+
+.button-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-h1{
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 48px;
+}
+
+.contact-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.img-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.contact-img{
+    width: 220px;
+    height: 340px;
+}
+
+#contact-img1{
+    width: 510px;
 }

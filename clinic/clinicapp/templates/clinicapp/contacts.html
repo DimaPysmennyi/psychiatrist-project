@@ -1,4 +1,5 @@
 {% extends './header.html' %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {% block content %}
+        <h1 class="contact-h1">Контактна інформація</h1>
+        <p class="contact-p">ФОП Тимченко Ярослава  Вячеславовна <br>ЄДРПОУ: 2976901929</p>
+        <div class="img-div">
+            <img class= "contact-img" id = "contact-img1" src="{% static 'clinicapp/images/IMG_6303.JPG' %}" alt="">
+            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_8420.JPG' %}" alt="">
+            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_6344.JPG' %}" alt="">
+            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
+        </div>
+        <p class="contact-p">тел: +380981607852<br>+380506839151</p>
+    {% endblock %}
 </body>
 </html>
