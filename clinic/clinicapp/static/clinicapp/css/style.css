@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body{
-    margin: 0;
+    /* margin: 0; */
     background-color: #FFFCE1;
 }
 
@@ -196,10 +196,10 @@ h2{
     font-family: 'Krub';
     outline: none;
     border: 1px black solid;
-    width: 635px;
+    width: 535px;
     height: 80px;
     padding: 10px 50px 10px 10px;
-    font-size: 32px;
+    font-size: 24px;
     /* color: rgba(0, 0, 0, 0.45); */
 }
 
@@ -310,4 +310,70 @@ h2{
 
 #contact-img1{
     width: 510px;
+}
+
+.service-h1{
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.service-p{
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 24px;
+}
+
+.card{
+    width: 350px;
+}
+
+.card-title{
+    text-align: center;
+    font-family: 'Comfortaa';
+}
+
+.btn{
+    margin: auto;
+}
+
+.card-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.therapy-h1, .consultation-h1{
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.therapy-p{
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 24px;
+}
+
+.consultation-h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.consultation-info{
+    background-color: white;
+    border: 1px solid black;
+    width: 1000px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.consultation-p{
+    font-family: 'Krub';
+    font-size: 24px;
+    text-align: center;
 }

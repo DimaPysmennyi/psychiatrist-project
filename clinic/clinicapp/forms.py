@@ -2,6 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import User
 from django.forms import ValidationError
+from django.core.validators import validate_email
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.validators import validate_international_phonenumber
 
@@ -13,11 +14,28 @@ def validate_numbers_in_text(value):
             params={"value": value},
         )
 
+def validate_one_word(value):
+    for char in value:
+        if char == " ":
+            raise ValidationError(
+                ("Введіть своє справжнє прізвище або ім'я!"), params={"value", value}
+            )
+
+def validate_email_address(value):
+    try:
+        validate_email(value)
+    except ValidationError:
+        raise ValidationError(
+            ("Не дійсний e-mail!"),
+            params={"value": value}
+        )
+
+
 class UserForm(ModelForm):
-    name = forms.CharField(label='', max_length=25,validators=[validate_numbers_in_text])
-    surname = forms.CharField(label='', max_length=25, validators=[validate_numbers_in_text])
+    name = forms.CharField(label='', max_length=25,validators=[validate_numbers_in_text, validate_one_word])
+    surname = forms.CharField(label='', max_length=25, validators=[validate_numbers_in_text, validate_one_word])
     phone = PhoneNumberField(label='', validators=[validate_international_phonenumber])
-    email = forms.EmailField(label='')
+    email = forms.EmailField(label='', validators=[validate_email_address])
     comment = forms.CharField(label='', widget=forms.Textarea())
 
     class Meta: 

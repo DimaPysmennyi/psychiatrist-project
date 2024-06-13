@@ -23,7 +23,14 @@ def form_view(request):
             return redirect("form") 
     else:
         form = UserForm()
+    print(form)
     return render(request, 'clinicapp/form.html', context={'form': form})
 
 def services_view(request):
     return render(request, 'clinicapp/services.html')
+
+def therapy_view(request):
+    return render(request, 'clinicapp/therapy.html')
+
+def consultation_view(request):
+    return render(request, 'clinicapp/consultation.html')

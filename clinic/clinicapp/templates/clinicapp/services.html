@@ -1,11 +1,44 @@
 {% extends './header.html' %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Послуги</title>
+    <link rel="stylesheet" href="{% static 'clinicapp/css/style.css' %}">
 </head>
 <body>
+    {% block content %}
+        <h1 class="service-h1">Послуги</h1>
+        <p class="service-p">Я працюю у двох напрямках:</p>
+        <div class="card-box">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'clinicapp/images/therapy.jpg' %}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Психотерапія</h5>
+                    <!-- <p class="card-text"></p> -->
     
+                    <div class="button-box">
+                        <a href="{% url 'therapy' %}" class="btn btn-secondary">Перейти</a>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="card">
+                <img class="card-img-top" src="{% static 'clinicapp/images/consultation.jpg' %}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Консультації</h5>
+                    <!-- <p class="card-text"></p> -->
+    
+                    <div class="button-box">
+                        <a href="{% url 'consultation' %}" class="btn btn-secondary">Перейти</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    {% endblock %}
 </body>
 </html>
