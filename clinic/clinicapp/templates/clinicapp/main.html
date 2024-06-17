@@ -1,4 +1,4 @@
-{% extends './header.html' %}
+{% extends './base.html' %}
 {% load static %}
 <html lang="en">
 <head>
@@ -12,33 +12,53 @@
 <body>
     {% block content %}
         <div class="main-div">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h1 class="headline">Вітаю, я Ярослава Тимченко.</h1>
-                        <p class="main-p">Магистр Психологии.</p>
-                        <p class="main-p">Член НАГТУ (Национальной ассоциации гештальт терапевтов Украины).</p>
-                        <p class="main-p">Высшее экономическое и высшее психологическое образование.</p>
-                        <p class="main-p">В терапии, тренингах и консультировании я более 8 лет, до этого я работала в финансовой сфере и в сфере продаж.</p>
-                        
-                        <div class="buttons">
-                            <a href="{% url 'form' %}">
-                                <button type="button" class="find-service">Підібрати сеанс</button>
-                            </a>
-    
-                            <a href="{% url 'about' %}">
-                                <button type="button" class="find-service">Дізнатися про мене</button>
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col">
-                        <img class = "img-main" src="{% static 'clinicapp/images/IMG_8420.JPG' %}" alt="">
-                    </div>
+            <div class="text-div">
+                <h1 class="headline">Вітаю, я Ярослава Тимченко.</h1>
+                <p class="main-p">Магістр психології.</p>
+                <p class="main-p">Член НАГТУ (Національної асоціації гештальт терапевтів України).</p>
+                <p class="main-p">Вища економічна та вища психологічна освіта.</p>
+                <p class="main-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів.</p>
+                
+                <div class="buttons">
+                    <button type="button" class="find-service" id="find-service">Підібрати сеанс</button>
+                    <button type="button" class="find-service" id="find-about">Дізнатися про мене</button>
                 </div>
             </div>
+
+            <img class = "img-main" src="{% static 'clinicapp/images/IMG_8420.JPG' %}">
+        </div>
+        <hr>
+        <div class="experience">
+            <h2 class="exp-h2">Мій досвід</h2>
+            <div class="numbers-div">
+                <div class="events">
+                    <p class="number">> 1000+</p>
+                    <p class="number-p">заходів, тренінгів та навчань</p>
+                </div>
+
+                <div class="consultations">
+                    <p class="number">> 3000+</p>
+                    <p class="number-p">особистих консультацій</p>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="about-me-div container">
+                <div class="row">
+                    <div class="col">
+                        <p class="about-me-p">Про мене</p>
+                        <h3 class="exp-h3">Мені 43 роки, я мама 14-річного сина.</h3>
+                        <img class="img" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
+                    </div>
+                    <div class="col about-text">
+                        <p>Вітаю, Я Ярослава Тимченко - магістр психології. Член НАДТУ (Національної асоціації гештальт терапевтів України).</p>
+                        <p>У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів. <br>Маю вищу економічну та вищу психологічну освіту.  <br>До вивчення психології я прийшла з чітким розумінням того, що я успішна, коли допомагаю іншим. <br>Я навчилася розуміти і розрізняти, що для мене є цінним і важливим. <br>Навчилася відпускати те, що вже втратило актуальність, і вибирати те, до чого тягнеться моя душа і те, чого хоче моє серце, а ще я навчилася вибирати себе, бо дуже старанно працювала над своєю самооцінкою. <br>І сьогодні я допомагаю впоратися з різними проблемами та складнощами своїм клієнтам.</p>
+                    </div>
+                    <p class="about-me-p2">Детальніше про мій шлях можна дізнатися <a href="{% url 'about' %}">тут</a></p>
+                    <hr>
+                </div>
+            </div>
+
         </div>
 
         

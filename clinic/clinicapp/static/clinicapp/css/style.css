@@ -3,20 +3,42 @@
 
 body{
     /* margin: 0; */
-    background-color: #FFFCE1;
+    padding-top: 150px;
+    background-color: #faf5f5;
+    color: #4e574b;
+    min-height: 100%;
+    height: 100%;
 }
 
 header{
     display: flex;
+    position: fixed;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+    top: 0;
     padding-left: 150px;
     padding-right: 150px;
-    background-color: #FFEB85;
-    max-width: 100%;
+    background-color: #faf5f5;
+    color: #4e574b;
+    width: 100%;
     height: 150px;
-    justify-content: space-between;
+    justify-content: center;
     gap: 80px;
     align-items: center;
     text-align: center;
+    z-index: 999;
+}
+
+.social{
+    display: flex;
+    gap: 5px;
+    font-size: 32px;
+}
+
+.social *{
+    border: 2px solid #4e574b;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 
 .faq-h1{
@@ -24,17 +46,22 @@ header{
 }
 
 .logo{
-    font-family: 'Comfortaa';
-    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    font-family: 'Krub';
+    font-size: 30px;
     font-weight: 300;
+    font-style: italic;
+    text-wrap: nowrap;
 }
 
-.logo label{
-    font-size: 28px;
+.logo .p2{
+    font-size: 24px;
 }
 
 header a{
-    color: black;
+    color: #4e574b;
     text-decoration: none;
 }
 
@@ -44,27 +71,30 @@ header a{
     gap: 40px;
     padding: 10px;
     font-family: 'Krub';
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .links a{
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .links a:hover{
     color: #8B8B8B;
+    border-bottom: 1px solid #8B8B8B;
 }
 
 .img-main{
-    height: 700px;
+    height: 550px;
 }
 
 .main-div{
     display: flex;
+    padding: 0 10px 0 10px;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     width: 100%;
-    height: 750px;
+    height: 600px;
 }
 
 .main-p{
@@ -75,30 +105,109 @@ header a{
 
 }
 
+/* .experience{
+    height: 500px;
+} */
+
+.exp-h2{
+    font-family: 'Krub';
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.numbers-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.number{
+    font-family: 'Krub';
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+}
+
+.number-p{
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.about-me-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Krub';
+
+}
+
+.about-me-div p{
+    font-size: 20px;
+}
+
+.img{
+    height: 300px;
+}
+
+.exp-h3{
+    font-size: 32px;
+    font-style: italic;
+    
+}
+
+.about-me-p{
+    text-align: none;
+    font-size: 20px;
+}
+
+.about-me-p2{
+    font-size: 32px;
+    font-style: italic;
+}
+
+.about-me-p2 a{
+    color:#4e574b;
+}
+
+.text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .headline{
-    font-family: 'Comfortaa';
-    font-weight: 700;
+    font-family: 'Krub';
+    /* font-weight: 700; */
     font-size: 36px;
+    font-style: italic;
 }
 
 .accordion{
     background-color:#FFFCE1;
 }
 
+
 .find-service{
-    width: 385px;
-    height: 70px;
+    width: 375px;
+    height: 60px;
     outline: none;
     border: none;
-    /* font-family: "Krub"; */
-    /* font-weight: 500; */
+    border-radius: 5px;
+    font-family: "Krub"; 
+    font-weight: 500;
     font-size: 24px;
-    background-color: #FFEFB7;
+    color: #faf5f5;
+    background-color: #678b5a;
     transition: background-color 0.2s;
 }
 
 .find-service:hover{
-    background-color: #CCB668;
+    background-color: #9dc48f;
 }
 
 .container{
@@ -141,7 +250,7 @@ header a{
 }
 
 h2{
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     text-align: center;
 }
 
@@ -187,7 +296,7 @@ h2{
 
 .h2_form{
     text-align: center; 
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 40px;
 }
 .errorlist li {
@@ -236,21 +345,21 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
-    background-color: #E0FFFF;
-    height: 750px;
+    /* height: 500px; */
+    padding:20px;
 }
 
 .goal-h2{
-    font-family: 'Comfortaa';
-    font-size: 48px;
+    font-family: 'Krub';
+    font-size: 40px;
     font-weight: 500;
 }
 
 .goal-p{
     font-family: 'Krub';
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -259,16 +368,17 @@ h2{
     height: 70px;
     outline: none;
     border: none;
+    border-radius: 5px;
     /* font-family: "Krub"; */
     /* font-weight: 500; */
+    color: white;
     font-size: 24px;
-    background-color: #7CFFF7;
+    background-color: #678b5a;
     transition: all 0.2s;
 }
 
 .goal-button:hover{
-    background-color: #307975;
-    color: white;
+    background-color: #9dc48f;
 }
 
 .accordion-div{
@@ -283,7 +393,7 @@ h2{
 }
 
 .accordion-text{
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 20px;
 }
 
@@ -300,7 +410,7 @@ h2{
 
 .contact-h1{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 48px;
 }
 
@@ -328,14 +438,14 @@ h2{
 
 .service-h1{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 48px;
     font-weight: 500;
 }
 
 .service-p{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 24px;
 }
 
@@ -345,7 +455,7 @@ h2{
 
 .card-title{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
 }
 
 .btn{
@@ -361,14 +471,14 @@ h2{
 
 .therapy-h1, .consultation-h1{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 48px;
     font-weight: 500;
 }
 
 .therapy-p{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 24px;
 }
 
@@ -401,6 +511,41 @@ h2{
 
 .about-h1{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Krub';
     font-size: 40px;
+}
+
+.about-p{
+    font-size: 18px;
+}
+
+br{
+    display: block;
+    content: "";
+    margin-top: 20px;
+}
+
+footer{
+    display: flex;
+    position: relative;
+    clear: both;
+    color: #faf5f5;
+    justify-content: center;
+    align-items: center;
+    background-color: #374f3d;
+    height: 200px; 
+    width: 100%;
+    margin-top: 20px;
+    gap: 80px;
+    /* bottom: 0; */
+}
+
+
+footer a{
+    text-decoration: none;
+    color: #faf5f5
+}
+
+footer .social *{
+    border: 2px solid #faf5f5;
 }

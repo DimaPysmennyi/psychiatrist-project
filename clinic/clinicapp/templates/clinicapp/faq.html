@@ -1,4 +1,4 @@
-{% extends './header.html' %}
+{% extends './base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,8 @@
 </head>
 <body>
     {% block content %}
-    <h1 class="faq-h1">Поширені запитання</h1>
+    
+    <!-- <h1 class="faq-h1">Поширені запитання</h1>
       <div class="accordion-div">
         <div class="accordion" id="accordionParent">
             <div class="accordion-item">
@@ -66,6 +67,81 @@
         </div>
         </div>
       </div>  
+      <div class="button-box">
+        <a href="{% url 'form' %}">
+          <button type="button" class="find-service">Підібрати сеанс</button>
+        </a>
+      </div> -->
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+
+    <div class="row text-center w-50" style="margin: 0 auto;">
+      <div class="col text-center">
+        <h2 class="h2 text-center text-success fst-italic">Як відбудеться перший сеанс?</h2>
+        <p class="text fs-4 text-success fw-light">
+          <ol>
+            <li>
+              В назначенный час Вы мне звоните по видеосвязи.
+              Первая встреча – это наше знакомство. 
+              Вы можете рассказать мне о себе, описать ситуацию и темы, с которыми хотелось бы поработать, задать вопросы как обо мне, так и о своем запросе. Я откликнусь, как вижу ситуацию со своей стороны, убедись, правильно ли понимаю Ваши желания и сориентирую, какой формат и методы работы я могу предложить.
+            </li>
+            <li style="margin-top: 20px;">
+              Вы можете не иметь четкого запроса.
+              В течение беседы я помогу задать вопрос, и мы вместе поищем, что именно тебя может беспокоить.
+            </li>
+            <li style="margin-top: 20px;">
+              Все, что проговаривается Вами на сессии, является конфиденциальным.
+            </li>
+          </ol>
+          </p>
+      </div>
+        <div class="col text-center">
+          <h2 class="h2 text-center fst-italic">Які умови роботи?</h2>
+          <p class="text text-center fs-4 fw-light">
+            <ol>
+              <li>Важно организовать тихое, спокойное место, где никто не будет отвлекать и слышать разговор.
+                Обеспечить себя исправным интернетом.
+              </li>
+                <li style="margin-top: 20px;">
+                  Рекомендуемая частота встреч – 1 раз в неделю. При необходимости можем договариваться на какой-нибудь промежуток времени 2 раза в неделю или 1 раз в 2 недели.
+                  Употребление алкоголя и нахождение на сессии в состоянии измененного сознания запрещено.
+                </li>
+                <li style="margin-top: 20px;">
+                  Отмена или перенос на другой день оговаривается за 24 часа до назначенного времени. 
+                  В противном случае сессия оплачивается.
+                </li>
+                <li style="margin-top: 20px;">
+                  Отмена или перенос на другой день по моей инициативе менее чем за 24 часа = бесплатное проведение 1 сессии.
+                </li>
+                <li style="margin-top: 20px;">
+                  Первая сессия всегда проходит по полной предоплате не позднее, чем за сутки до начала.
+                </li>
+            </ol>
+          </p>
+        </div>
+    </div>
+          
+                    <div class="accordion-item">
+            <h2 class="accordion-header h1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="#collapseThree">Скільки триває зустріч?</button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="accordionParent">
+                <div class="accordion-body">
+                    <p class="accordion-text">
+                      В назначенный час Вы мне звоните по видеосвязи <br>
+                      Тривалість - <b>50 хвилин.</b> <br>
+                      Мови - <b>українська та російська.</b></p>
+                </div>
+            </div>
       <div class="button-box">
         <a href="{% url 'form' %}">
           <button type="button" class="find-service">Підібрати сеанс</button>
