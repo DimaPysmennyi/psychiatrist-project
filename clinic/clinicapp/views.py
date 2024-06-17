@@ -34,3 +34,6 @@ def therapy_view(request):
 
 def consultation_view(request):
     return render(request, 'clinicapp/consultation.html')
+
+def about_view(request):
+    return render(request, 'clinicapp/about.html')

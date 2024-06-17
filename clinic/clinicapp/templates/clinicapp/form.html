@@ -17,7 +17,7 @@
                     <input type="tel" placeholder="Номер телефону" name="phone-number">
                     <textarea name="text" placeholder="Коментар"></textarea> -->
                     {% csrf_token %}
-                    {{form.as_p}}
+                    {{ form.as_p }}
                     <button class="btn-form">Надіслати</button>
                 </form>
             </div>
