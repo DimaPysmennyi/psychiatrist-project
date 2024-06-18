@@ -4,9 +4,6 @@ from .models import User
 
 # Create your views here.
 
-def faq_view(request):
-    return render(request, 'clinicapp/faq.html')
-
 def main_view(request):
     return render(request, 'clinicapp/main.html')
 
@@ -28,12 +25,6 @@ def form_view(request):
 
 def services_view(request):
     return render(request, 'clinicapp/services.html')
-
-def therapy_view(request):
-    return render(request, 'clinicapp/therapy.html')
-
-def consultation_view(request):
-    return render(request, 'clinicapp/consultation.html')
 
 def about_view(request):
     return render(request, 'clinicapp/about.html')

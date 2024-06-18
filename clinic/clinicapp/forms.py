@@ -48,7 +48,7 @@ class UserForm(ModelForm):
         self.fields['surname'].widget.attrs.update({'id': 'surname', 'class' : 'input'})
         self.fields['phone'].widget.attrs.update({'id': 'phone', 'class' : 'input'})
         self.fields['email'].widget.attrs.update({'id': 'email', 'class' : 'input'})
-        self.fields['comment'].widget.attrs.update({'id': 'comment', 'class' : 'input'})
+        self.fields['comment'].widget.attrs.update({'id': 'comment', 'class' : 'textarea'})
 
         self.fields['name'].widget.attrs.update({'placeholder' : "Ім'я"})
         self.fields['surname'].widget.attrs.update({'placeholder' : "Прізвище"})

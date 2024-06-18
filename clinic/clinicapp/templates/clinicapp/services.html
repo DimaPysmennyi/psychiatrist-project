@@ -9,37 +9,186 @@
 </head>
 <body>
     {% block content %}
-        <h1 class="service-h1">Послуги</h1>
-        <p class="service-p">Я працюю у двох напрямках:</p>
-        <div class="card-box">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'clinicapp/images/therapy.jpg' %}" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Психотерапія</h5>
-                    <!-- <p class="card-text"></p> -->
-    
-                    <div class="button-box">
-                        <a href="{% url 'therapy' %}" class="btn btn-secondary">Перейти</a>
-                    </div>
-                    
-                </div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col text-center">
+          <img class="img-consult img-thumbnail" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
+          <a href="{% url 'form' %}">
+            <button class="find-service" type="button">Підібрати сеанс</button>
+          </a>
+        </div>
+        <div class="col">
+          <h2 class="consult-h2">Я працюю у двох форматах</h2>
+          <h3 class="consult-h3">В чому різниця?</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col consult-col1">
+                <h3 class="consult-h3">Психотерапія</h3>
+                <ul>
+                  <li>В середньому від одного року</li>
+                  <li>Увага сфокусована на особистості</li>
+                  <li>Найкраще підходить для роботи з емоційним інтелектом, проживанням кризових періодів, запитами щодо побудови відносин, роботи з самооцінкою та самосприйняттям</li>
+                  <li>Спрямована на глибокі зміни</li>
+                </ul>
+              </div>
+              <!-- <div class="vr w-10"></div> -->
+              <div class="col">
+                <h3 class="consult-h3">Консультації</h3>
+                <ul>
+                  <li>У середньому від 1-5 до 10-12 сесій</li>
+                  <li>Увага сфокусована на особистості</li>
+                  <li>Найкраще підходить для роботи з поведінкою (звичкою), конкретними ситуаціями чи конфліктами</li>
+                  <li>Спрямована на усвідомлення причин поведінки, отримання нового досвіду та формування плану дій</li>
+                </ul>
+              </div>
+              </div>
             </div>
-    
-            <div class="card">
-                <img class="card-img-top" src="{% static 'clinicapp/images/consultation.jpg' %}" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Консультації</h5>
-                    <!-- <p class="card-text"></p> -->
-    
-                    <div class="button-box">
-                        <a href="{% url 'consultation' %}" class="btn btn-secondary">Перейти</a>
-                    </div>
-                    
-                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container themes">
+      <div class="row">
+        <h2 class="consult-h2">Приклади тем, з якими я працюю</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul class="consult-ul"> 
+            <li>Переїзд</li>
+            <li>Відносини з батьками</li>
+            <li>Сепарація від батьків</li>
+            <li>Шлюб / розлучення</li>
+            <li>Зрада</li>
+            <li>Народження дитини</li>
+            <li>Ставлення з дітьми</li> 
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="consult-ul">
+            <li>Низька самооцінка</li>
+            <li>Особисті кордони</li>
+            <li>Залежність від думки оточуючих</li>
+            <li>Тривога, сумніви, почуття провини, докори совісті</li>
+            <li>Емоційність, агресія</li>
+            <li>Проживання конфліктів</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="consult-ul">
+            <li>Грані ідентичності (жіноча/чоловіча ідентичність, професійна, батьківська тощо)</li>
+            <li>Страх самотності</li>
+            <li>Страх близькості та довіри</li>
+            <li>Побудова відносин у парі</li>
+            <li>Робота, кар'єра, самореалізація, пошук себе</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row w-50" style="margin: 0 auto;">
+      <div class="col">
+        <h2 class="h2 text-center fst-italic">Як відбудеться перший сеанс?</h2>
+        <p class="text fs-4 text-success fw-light">
+          <ul>
+            <li>
+              У назначений час Ви дзвоните мені по відеозв'язку. Перша зустріч – це наше знайомство. Ви можете розповісти мені про себе, описати ситуацію та теми, з якими хотілося б попрацювати, поставити запитання як про мене, так і про свій запит. Я відгукнуся, як бачу ситуацію зі свого боку, переконайся, чи правильно розумію Ваші бажання та зорієнтую, який формат та методи роботи я можу запропонувати.
+            </li>
+            <li style="margin-top: 20px;">
+              Ви можете не мати чіткого запиту. Протягом розмови я допоможу поставити запитання, і ми разом знайдемо, що саме тебе може турбувати.
+            </li>
+            <li style="margin-top: 20px;">
+              Все, що промовляється Вами на сесії, є конфіденційним.
+            </li>
+          </ul>
+        </p>
+      </div>
+        <div class="col">
+          <h2 class="h2 text-center fst-italic">Які умови роботи?</h2>
+          <p class="text fs-4 fw-light">
+            <ul>
+              <li>Важливо організувати тихе, спокійне місце, де ніхто не відволікатиме і чутиме розмову. Забезпечити себе справним інтернетом</li>
+              <li style="margin-top: 20px;">
+                Частота зустрічей, що рекомендується, – 1 раз на тиждень. При необхідності можемо домовлятися на якийсь проміжок часу 2 рази на тиждень або 1 раз на 2 тижні.
+              </li>
+              <li style="margin-top: 20px;">
+                Скасування або перенесення на інший день обумовлюється за 24 години до призначеного часу. 
+                Інакше сесія оплачується.
+              </li>
+              <li style="margin-top: 20px;">
+                Вживання алкоголю та перебування на сесії у стані зміненої свідомості заборонено.
+              </li>
+              <li style="margin-top: 20px;">
+                Скасування або перенесення на інший день за моєю ініціативою менш як за 24 години = безкоштовне проведення 1 сесії.
+              </li>
+              <li style="margin-top: 20px;">
+                Перша сесія завжди відбувається за повною передоплатою не пізніше ніж за добу до початку.
+              </li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="couples container">
+      <div class="row">
+        <h2 class="consult-h2">Робота з парами</h2>
+        <p class="consult-p"><b>Робота з парами</b> – це окремий вид терапії, на ці зустрічі Ви приходите вдвох зі своїм партнером.</p>
+
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <img class="img-couple" src="{% static 'clinicapp/images/IMG_3254.jpg' %}" alt="">
+        </div>
+        <div class="col">
+          <h3 class="consult-h3">Кому це підійде?</h3>
+          <p class="consult-p couple-p">-Парна терапія є важливим інструментом для тих, хто має справу з проблемами спілкування, сімейними проблемами. <br>-Це допомагає парам відкрито говорити про давні почуття, усувати перешкоди у відносинах, зміцнювати близькість.
+            <br>-Сімейна психотерапія може бути умовно перекладачем для пари. Найчастіше це буває єдиним способом знайти розуміння і домовитися. <br>-Дуже часто парна психотерапія дозволяє зміцнити відносини, дозволивши людям краще розуміти одне одного.
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
+    <hr>
+    <div class="group-therapy">
+        <h3 class="consult-h3"><b>Групова психотерапія</b> - це спосіб вирішення психологічних проблем у колективі, психотерапевтичної групи. </h3>
+        <p class="consult-p couple-p">Люди, які перебувають у групі, може бути об'єднані однаковими проблемами, схожою життєвої ситуацією.
+        <br>Психотерапія – це «зцілення душі душею», а групова терапія – це «зцілення душі за допомогою багатьох душ».
+        <br>Учасники у групі зазвичай поводяться дуже подібно до того, як у звичайному житті. <br>Якщо, наприклад, у життєвих ситуаціях учасник поводиться досить агресивно або навпаки дуже стриманий, то таким він буде й у групі.
+        <br>Таким чином можна відстежити за допомогою групи, що перешкоджає Вам у тій чи іншій ситуації тобто. що у Вашому прояві заважає досягти, гармонії з оточуючими.
+        <br>Люди, їх досвід, почуття та взаємини між собою є психотерапевтичним інструментом у цьому і є особливість групової терапії.</p>
+    </div>
+    <hr>
+
+    <div class="info container">
+        <div class="row text-center">
+            <div class="col">
+                <img class="img-icon" src="{% static 'clinicapp/images/duration.png' %}" alt="">
+                <h3 class="h3">Тривалість</h3>
+                <p>50 хвилин</p>
+            </div>
+            <div class="col">
+                <img class="img-icon" src="{% static 'clinicapp/images/computer-svgrepo-com.svg' %}" alt="">
+                <h3 class="h3">Формат</h3>
+                <p>online</p>
+            </div>
+            <div class="col">
+                <img class="img-icon" src="{% static 'clinicapp/images/language-svgrepo-com.svg' %}" alt="">
+                <h3 class="h3">Мови</h3>
+                <p>українська та російська</p>
             </div>
         </div>
-        <!-- ------- -->
-         
+    </div>
+    <hr>
+    <div class="button-box">
+      <a href="{% url 'form' %}">
+        <button type="button" class="find-service">Підібрати сеанс</button>
+      </a>
+    </div>
+
+
     {% endblock %}
 </body>
 </html>

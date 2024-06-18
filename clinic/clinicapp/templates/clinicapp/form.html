@@ -9,18 +9,18 @@
     </head>
     <body>
         {% block content %}
-            <div class="wrapper">
-                <h2 class="h2_form">Записатись на прийом</h2>
-                <form method="POST">
-                    <!-- <input type="text" placeholder="Iм'я" name="name">
-                    <input type="email" placeholder="E-mail" name="email">
-                    <input type="tel" placeholder="Номер телефону" name="phone-number">
-                    <textarea name="text" placeholder="Коментар"></textarea> -->
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="btn-form">Надіслати</button>
-                </form>
-            </div>
+           
+            <h2 class="h2_form">Записатись на прийом</h2>
+            <form method="POST" class="text-center">
+                <!-- <input type="text" placeholder="Iм'я" name="name">
+                <input type="email" placeholder="E-mail" name="email">
+                <input type="tel" placeholder="Номер телефону" name="phone-number">
+                <textarea name="text" placeholder="Коментар"></textarea> -->
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-form">Надіслати</button>
+            </form>
+          
         {% endblock %}
     </body>
 </html>

@@ -277,7 +277,8 @@ h2{
 }
 
 
-.wrapper{
+
+/* .wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +290,7 @@ h2{
     border: 3px solid rgba(0, 0, 0, 0.5); 
     margin: auto; 
     text-align: center;
-}
+} */
 
 .h2_form{
     text-align: center; 
@@ -315,27 +316,45 @@ h2{
     border-radius: 5px;
     font-family: 'Krub';
     outline: none;
-    border: 1px black solid;
-    width: 535px;
-    height: 80px;
+    /* border: 1px black solid; */
+    border-width: 0px;
+    width: 600px;
+    height: 60px;
     padding: 10px 50px 10px 10px;
     font-size: 24px;
     /* color: rgba(0, 0, 0, 0.45); */
+    /* text-align: center; */
+}
+
+.textarea{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-family: 'Krub';
+    outline: none;
+    /* border: 1px black solid; */
+    border-width: 0px;
+    width: 600px;
+    height: 200px;
+    padding: 10px 50px 10px 10px;
+    font-size: 24px;
 }
 
 .btn-form{
-    background-color: #FFB979;
+    background-color: #678b5a;
     font-family: 'Krub';
     font-size: 32px;
-    width: 550px;
-    height: 110px;
-    border: 1px solid black;
+    color: #faf5f5;
+    width: 600px;
+    height: 50px;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    border-width: 0px;
     transition: all 0.2s;
     border-radius: 5px;
 }
 
 .btn-form:hover{
-    background-color: #F6A356;
+    background-color: #73a261;
 }
 
 .goal-div{
@@ -581,4 +600,41 @@ ul{
 
 .consult-ul{
     font-size: 20px;
+    list-style-image: url("../images/iconmonstr-check-mark-5.svg");
+}
+
+form{
+    /* background-color: #F6A356; */
+    width: 100;
+}
+
+.consult-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 18px
+}
+
+.img-couple{
+    height: 400px;
+}
+
+.couple-p{
+    font-size: 20px;
+}
+
+.img-icon{
+    width: 75px;
+    height: 75px;
+}
+
+.info{
+    padding: 50px
+}
+
+
+
+
+ .icons{
+    display: flex;
+    justify-content: center;
 }
