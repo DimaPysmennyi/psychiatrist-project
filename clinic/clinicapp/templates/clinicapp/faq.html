@@ -1,4 +1,5 @@
 {% extends './base.html' %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,86 +10,87 @@
 </head>
 <body>
     {% block content %}
-    
-    <!-- <h1 class="faq-h1">Поширені запитання</h1>
-      <div class="accordion-div">
-        <div class="accordion" id="accordionParent">
-            <div class="accordion-item">
-                <h2 class="accordion-header h1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="#collapseOne">Як відбудеться перший сеанс?</button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="accordionParent">
-                    <div class="accordion-body">
-                        <p class="accordion-text">В назначенный час Вы мне звоните по видеосвязи.
-                          Первая встреча – это наше знакомство. 
-                          Вы можете рассказать мне о себе, описать ситуацию и темы, с которыми хотелось бы поработать, задать вопросы как обо мне, так и о своем запросе. Я откликнусь, как вижу ситуацию со своей стороны, убедись, правильно ли понимаю Ваши желания и сориентирую, какой формат и методы работы я могу предложить.
-                          
-                          Вы можете не иметь четкого запроса.
-                          В течение беседы я помогу задать вопрос, и мы вместе поищем, что именно тебя может беспокоить.
-                          
-                          Все, что проговаривается Вами на сессии, является конфиденциальным.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header h1">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="#collapseTwo">Які умови роботи?</button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="accordionParent">
-                  <div class="accordion-body">
-                      <p class="accordion-text">Важно организовать тихое, спокойное место, где никто не будет отвлекать и слышать разговор.
-                        Обеспечить себя исправным интернетом.
-                        Рекомендуемая частота встреч – 1 раз в неделю. При необходимости можем договариваться на какой-нибудь промежуток времени 2 раза в неделю или 1 раз в 2 недели.
-                        Употребление алкоголя и нахождение на сессии в состоянии измененного сознания запрещено.
-                        
-                        Отмена или перенос на другой день оговаривается за 24 часа до назначенного времени. 
-                        В противном случае сессия оплачивается.
-                        
-                        Отмена или перенос на другой день по моей инициативе менее чем за 24 часа = бесплатное проведение 1 сессии.
-                        
-                        Первая сессия всегда проходит по полной предоплате не позднее, чем за сутки до начала.</p>
-                  </div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col text-center">
+          <img class="img-consult img-thumbnail" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
+          <a href="{% url 'form' %}">
+            <button class="find-service" type="button">Підібрати сеанс</button>
+          </a>
+        </div>
+        <div class="col">
+          <h2 class="consult-h2">Я працюю у двох форматах</h2>
+          <h3 class="consult-h3">В чому різниця?</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col consult-col1">
+                <h3 class="consult-h3">Психотерапія</h3>
+                <ul>
+                  <li>В середньому від одного року</li>
+                  <li>Увага сфокусована на особистості</li>
+                  <li>Найкраще підходить для роботи з емоційним інтелектом, проживанням кризових періодів, запитами щодо побудови відносин, роботи з самооцінкою та самосприйняттям</li>
+                  <li>Спрямована на глибокі зміни</li>
+                </ul>
               </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header h1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="#collapseThree">Скільки триває зустріч?</button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="accordionParent">
-                <div class="accordion-body">
-                    <p class="accordion-text">
-                      В назначенный час Вы мне звоните по видеосвязи <br>
-                      Тривалість - <b>50 хвилин.</b> <br>
-                      Мови - <b>українська та російська.</b></p>
-                </div>
+              <div class="col">
+                <h3 class="consult-h3">Консультації</h3>
+                <ul>
+                  <li>У середньому від 1-5 до 10-12 сесій</li>
+                  <li>Увага сфокусована на особистості</li>
+                  <li>Найкраще підходить для роботи з поведінкою (звичкою), конкретними ситуаціями чи конфліктами</li>
+                  <li>Спрямована на усвідомлення причин поведінки, отримання нового досвіду та формування плану дій</li>
+                </ul>
+              </div>
+              </div>
             </div>
-        </div>
-        </div>
-      </div>  
-      <div class="button-box">
-        <a href="{% url 'form' %}">
-          <button type="button" class="find-service">Підібрати сеанс</button>
-        </a>
-      </div> -->
-      <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
-        <div class="col">
-
+          </div>
         </div>
       </div>
-
+    </div>
+    <hr>
+    <div class="container themes">
+      <div class="row">
+        <h2 class="consult-h2">Приклади тем, з якими я працюю</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul class="consult-ul"> 
+            <li>Переїзд</li>
+            <li>Відносини з батьками</li>
+            <li>Сепарація від батьків</li>
+            <li>Шлюб / розлучення</li>
+            <li>Зрада</li>
+            <li>Народження дитини</li>
+            <li>Ставлення з дітьми</li> 
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="consult-ul">
+            <li>Низька самооцінка</li>
+            <li>Особисті кордони</li>
+            <li>Залежність від думки оточуючих</li>
+            <li>Тривога, сумніви, почуття провини, докори совісті</li>
+            <li>Емоційність, агресія</li>
+            <li>Проживання конфліктів</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="consult-ul">
+            <li>Грані ідентичності (жіноча/чоловіча ідентичність, професійна, батьківська тощо)</li>
+            <li>Страх самотності</li>
+            <li>Страх близькості та довіри</li>
+            <li>Побудова відносин у парі</li>
+            <li>Робота, кар'єра, самореалізація, пошук себе</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
     <div class="row text-center w-50" style="margin: 0 auto;">
       <div class="col text-center">
-        <h2 class="h2 text-center text-success fst-italic">Як відбудеться перший сеанс?</h2>
+        <h2 class="h2 text-center fst-italic">Як відбудеться перший сеанс?</h2>
         <p class="text fs-4 text-success fw-light">
-          <ol>
+          <ul>
             <li>
               В назначенный час Вы мне звоните по видеосвязи.
               Первая встреча – это наше знакомство. 
@@ -101,13 +103,13 @@
             <li style="margin-top: 20px;">
               Все, что проговаривается Вами на сессии, является конфиденциальным.
             </li>
-          </ol>
-          </p>
+          </ul>
+        </p>
       </div>
         <div class="col text-center">
           <h2 class="h2 text-center fst-italic">Які умови роботи?</h2>
           <p class="text text-center fs-4 fw-light">
-            <ol>
+            <ul>
               <li>Важно организовать тихое, спокойное место, где никто не будет отвлекать и слышать разговор.
                 Обеспечить себя исправным интернетом.
               </li>
@@ -125,28 +127,21 @@
                 <li style="margin-top: 20px;">
                   Первая сессия всегда проходит по полной предоплате не позднее, чем за сутки до начала.
                 </li>
-            </ol>
+            </ul>
           </p>
         </div>
     </div>
-          
-                    <div class="accordion-item">
-            <h2 class="accordion-header h1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="#collapseThree">Скільки триває зустріч?</button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="accordionParent">
-                <div class="accordion-body">
-                    <p class="accordion-text">
-                      В назначенный час Вы мне звоните по видеосвязи <br>
-                      Тривалість - <b>50 хвилин.</b> <br>
-                      Мови - <b>українська та російська.</b></p>
-                </div>
-            </div>
-      <div class="button-box">
-        <a href="{% url 'form' %}">
-          <button type="button" class="find-service">Підібрати сеанс</button>
-        </a>
-      </div>
+    <hr>
+    <div class="info">
+      
+    </div>
+    <hr>
+    <div class="button-box">
+      <a href="{% url 'form' %}">
+        <button type="button" class="find-service">Підібрати сеанс</button>
+      </a>
+    </div>
+
 
     {% endblock %}
 </body>

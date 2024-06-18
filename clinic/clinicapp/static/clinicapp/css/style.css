@@ -210,10 +210,7 @@ header a{
     background-color: #9dc48f;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-}
+
 
 .path-history-div{
     display: flex;
@@ -517,6 +514,11 @@ h2{
 
 .about-p{
     font-size: 18px;
+    font-family: 'Krub';
+}
+
+.img-about{
+    height: 600px;
 }
 
 br{
@@ -548,4 +550,35 @@ footer a{
 
 footer .social *{
     border: 2px solid #faf5f5;
+}
+
+.img-consult{
+    height: 500px;
+}
+
+.consult-h2{
+    text-align: center;
+    font-style: 40px;
+    font-family: 'Krub';
+    font-style: italic;
+}
+
+.consult-h3{
+    text-align: center;
+    font-style: 24px;
+    font-family: 'Krub';
+    font-style: italic;
+}
+
+.consult-col1{
+    border-right: 1px
+}
+
+ul{
+    font-family: 'Krub';
+    font-size: 18px;
+}
+
+.consult-ul{
+    font-size: 20px;
 }
