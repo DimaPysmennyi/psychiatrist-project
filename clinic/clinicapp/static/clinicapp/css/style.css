@@ -1,100 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    /* margin: 0; */
+    margin: 0;
+    padding: 0;
     padding-top: 150px;
     background-color: #faf5f5;
     color: #4e574b;
+    width: 100%;
     min-height: 100%;
-    height: 100%;
+    overflow-x: hidden;
 }
 
-header{
-    display: flex;
+nav{ 
     position: fixed;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     top: 0;
-    padding-left: 150px;
-    padding-right: 150px;
     background-color: #faf5f5;
     color: #4e574b;
     width: 100%;
     height: 150px;
-    justify-content: center;
-    gap: 80px;
-    align-items: center;
-    text-align: center;
     z-index: 999;
+    font-family: 'Krub';
 }
 
-.social{
-    display: flex;
-    gap: 5px;
+.logo{
+    line-height: 150px;
+    padding: 0 100px;
+    /* font-weight: bold; */
     font-size: 32px;
+    text-wrap: nowrap;
 }
 
-.social *{
+nav a{
+    text-decoration: none;
+    color: #4e574b;
+}
+
+nav ul li a:hover{
+    color: #8B8B8B;
+    transition: all 0.5s ease;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 150px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    text-transform: uppercase;
+    padding: 7 13px;
+    font-size: 24px;    
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#4e574b;
+    float: right;
+    line-height: 150px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1144px){
+    .logo{
+        font-size: 32px;
+        padding-left: 50px;
+    }
+
+    .text-div{
+        text-align: center;
+    }
+
+    .buttons{
+        align-items: center;
+        gap: 5px;
+    }
+
+    .img-col{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .img-main{
+        float: none;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #374f3d;
+        top: 150px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        
+    }
+
+    nav ul li a{
+        font-size: 24px;
+        color: #faf5f5;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+@media (max-width: 787px) {
+    .experience{
+        width: 100%
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+}
+
+.socials {
     border: 2px solid #4e574b;
     padding: 5px;
     border-radius: 10px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    font-size: 32px;
 }
 
 .faq-h1{
     text-align: center;
 }
 
-.logo{
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    font-family: 'Krub';
-    font-size: 30px;
-    font-weight: 300;
-    font-style: italic;
-    text-wrap: nowrap;
-}
-
-.logo .p2{
-    font-size: 24px;
-}
-
-header a{
-    color: #4e574b;
-    text-decoration: none;
-}
-
-.links{
-    display: flex; 
-    /* justify-content: space-around; */
-    gap: 40px;
-    padding: 10px;
-    font-family: 'Krub';
-    font-size: 24px;
-}
-
-.links a{
-    transition: all 0.3s;
-}
-
-.links a:hover{
-    color: #8B8B8B;
-    border-bottom: 1px solid #8B8B8B;
+.img-col{
+    clear: both;
 }
 
 .img-main{
-    height: 550px;
-}
-
-.main-div{
-    display: flex;
-    padding: 0 10px 0 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-    height: 600px;
+    height: 500px;
+    float: right;
 }
 
 .main-p{
@@ -105,9 +182,9 @@ header a{
 
 }
 
-/* .experience{
-    height: 500px;
-} */
+.main-div{
+    margin: 0 auto;
+}
 
 .exp-h2{
     font-family: 'Krub';
@@ -230,6 +307,10 @@ header a{
     background-color: #fff8de;
     align-items: center;
     justify-content: center;
+}
+
+.container{
+    padding-bottom: 10px;
 }
 
 .path-container{
@@ -521,8 +602,8 @@ h2{
 .buttons{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 150px;
+    gap: 10px;
+    /* height: 150px; */
 }
 
 .about-h1{
@@ -537,7 +618,7 @@ h2{
 }
 
 .img-about{
-    height: 600px;
+    height: auto;
 }
 
 br{
@@ -564,7 +645,9 @@ footer{
 
 footer a{
     text-decoration: none;
-    color: #faf5f5
+    color: #faf5f5;
+    font-size: 24px;
+    font-family: 'Krub';
 }
 
 footer .social *{
@@ -628,13 +711,26 @@ form{
 }
 
 .info{
-    padding: 50px
+    padding: 50px;
+    margin-bottom: 10px;
 }
 
 
 
 
- .icons{
+.icons{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.logo-app{
+    width: 50px;
+    height: 50px;
+}
+
+#tg-logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px
 }
