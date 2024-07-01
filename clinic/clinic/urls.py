@@ -24,5 +24,6 @@ urlpatterns = [
     path('contacts/', contacts_view, name="contacts"),
     path('form/', form_view, name="form"),
     path('services/', services_view, name="services"),
-    path('about/', about_view, name="about")
+    path('about/', about_view, name="about"),
+    path('handle_request', handle_form_request, name="handle_request")
 ]

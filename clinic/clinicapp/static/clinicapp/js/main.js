@@ -8,3 +8,4 @@ btnAbout.addEventListener("click", () => {
 btnService.addEventListener("click", () => {
     window.location.replace("/form");
 })
+

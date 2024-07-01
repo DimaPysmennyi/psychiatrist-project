@@ -1,10 +1,11 @@
 from django import forms
 from django.forms import ModelForm
+from django.http import HttpResponse
 from .models import User
 from django.forms import ValidationError
-from django.core.validators import validate_email
 from phonenumber_field.formfields import PhoneNumberField
-from phonenumber_field.validators import validate_international_phonenumber
+from phone_number_validator.validator import PhoneNumberValidator
+from validate_email import validate_email
 
 def validate_numbers_in_text(value):
     for char in value:
@@ -22,19 +23,25 @@ def validate_one_word(value):
             )
 
 def validate_email_address(value):
-    try:
-        validate_email(value)
-    except ValidationError:
+    email = validate_email(value, verify=True)
+    if email == False:
         raise ValidationError(
             ("Не дійсний e-mail!"),
             params={"value": value}
         )
 
+def validate_phone_number(value):
+    validator = PhoneNumberValidator(api_key='num_live_caNSrTitKZJ7DXgpF3QKFUARdOX95SCHTE9bMFx2')
+    if not validator.validate(value):
+        raise ValidationError(
+            ("")
+        )
+
 
 class UserForm(ModelForm):
-    name = forms.CharField(label='', max_length=25,validators=[validate_numbers_in_text, validate_one_word])
-    surname = forms.CharField(label='', max_length=25, validators=[validate_numbers_in_text, validate_one_word])
-    phone = PhoneNumberField(label='', validators=[validate_international_phonenumber])
+    name = forms.CharField(label='', max_length=25)
+    surname = forms.CharField(label='', max_length=25)
+    phone = PhoneNumberField(label='', validators=[])
     email = forms.EmailField(label='', validators=[validate_email_address])
     comment = forms.CharField(label='', widget=forms.Textarea())
 
@@ -44,11 +51,11 @@ class UserForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(UserForm, self).__init__(*args, **kwargs)
-        self.fields['name'].widget.attrs.update({'id': 'name', 'class' : 'input'})
-        self.fields['surname'].widget.attrs.update({'id': 'surname', 'class' : 'input'})
-        self.fields['phone'].widget.attrs.update({'id': 'phone', 'class' : 'input'})
-        self.fields['email'].widget.attrs.update({'id': 'email', 'class' : 'input'})
-        self.fields['comment'].widget.attrs.update({'id': 'comment', 'class' : 'textarea'})
+        self.fields['name'].widget.attrs.update({'id': 'name', 'class' : 'input', 'name': 'first-name'})
+        self.fields['surname'].widget.attrs.update({'id': 'surname', 'class' : 'input', 'name': 'surname'})
+        self.fields['phone'].widget.attrs.update({'id': 'phone', 'class' : 'input', 'name': 'phone'})
+        self.fields['email'].widget.attrs.update({'id': 'email', 'class' : 'input', 'name': 'email'})
+        self.fields['comment'].widget.attrs.update({'id': 'comment', 'class' : 'textarea', 'name': 'comment'})
 
         self.fields['name'].widget.attrs.update({'placeholder' : "Ім'я"})
         self.fields['surname'].widget.attrs.update({'placeholder' : "Прізвище"})

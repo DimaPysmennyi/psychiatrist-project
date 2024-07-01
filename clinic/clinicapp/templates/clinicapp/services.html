@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Послуги</title>
-    <link rel="stylesheet" href="{% static 'clinicapp/css/style.css' %}">
+    {% block title %}
+      <title>Послуги</title>
+    {% endblock %}
 </head>
 <body>
     {% block content %}
@@ -137,8 +138,8 @@
       </div>
       
       <div class="row">
-        <div class="col">
-          <img class="img-couple" src="{% static 'clinicapp/images/IMG_3254.jpg' %}" alt="">
+        <div class="col col-md-12">
+          <img class="img-couple img-fluid" src="{% static 'clinicapp/images/IMG_3254.jpg' %}" alt="">
         </div>
         <div class="col">
           <h3 class="consult-h3">Кому це підійде?</h3>
