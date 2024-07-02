@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна сторінка</title>
+    {% block title %}
+        <title>Головна сторінка</title>
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'clinicapp/css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
     {% block content %}
-        <div class="main-div container justify-content-center">
+        <div class="main-div container justify-content-center container-fluid">
             <div class="row align-items-center mx-auto">
-                <div class="col">
+                <div class="col col-12 col-lg-6">
                     <div class="text-div">
                         <h1 class="headline">Вітаю, я Ярослава Тимченко.</h1>
                         <p class="main-p">Магістр психології.</p>
@@ -27,8 +29,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-md-12 col-lg-6 text-center img-col">
-                    <img class = "img-main" src="{% static 'clinicapp/images/IMG_8420.JPG' %}">
+                <div class="col col-12 col-lg-6 text-center img-col">
+                    <img class = "img-main img-fluid" src="{% static 'clinicapp/images/IMG_8420.JPG' %}">
                 </div>
                 
     
@@ -58,7 +60,7 @@
         <hr>
         <div class="about-me-div container">
             <div class="row">
-                <div class="col col-md-12 col-lg-6">
+                <div class="col col-12 col-lg-6">
                     <p class="about-me-p">Про мене</p>
                     <h3 class="exp-h3">Мені 43 роки, я мама 14-річного сина.</h3>
                     <img class="img" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "phonenumber_field",
-    'clinicapp',
+    'clinicapp'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,21 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ASGI_APPLICATION = "clinic.asgi.application"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'emailtelebot@gmail.com'
+
+DEFAULT_FROM_EMAIL = 'emailtelebot@gmail.com'
+
+EMAIL_SERVER = 'emailtelebot@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'hkzr nrbd japc fwno'
+
+EMAIL_USE_TLS = True
