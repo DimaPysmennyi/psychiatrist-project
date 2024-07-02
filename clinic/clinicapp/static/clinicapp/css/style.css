@@ -90,6 +90,8 @@ nav ul li a{
 
 
 
+
+
     .text-div{
         text-align: center;
     }
@@ -154,6 +156,7 @@ nav ul li a{
     }
 
     #check:checked ~ nav ul{
+    #check:checked ~ nav ul{
         left: 0;
     }
 }
@@ -169,6 +172,10 @@ nav ul li a{
 
     nav .logo{
         font-size: 24px;
+    }
+
+    footer a{
+        font-size: 16px;
     }
 
     footer a{

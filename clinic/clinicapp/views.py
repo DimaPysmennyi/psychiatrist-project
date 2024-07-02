@@ -9,6 +9,8 @@ from clinic.settings import DEFAULT_FROM_EMAIL, EMAIL_HOST_USER
 
 # Create your views here.
 
+# asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy()) 
+
 def main_view(request):
     return render(request, 'clinicapp/main.html')
 
@@ -16,6 +18,8 @@ def contacts_view(request):
     return render(request, 'clinicapp/contacts.html')
 
 def form_view(request):
+    form = UserForm()
+    # print(form)
     form = UserForm()
     # print(form)
     return render(request, 'clinicapp/form.html', context={'form': form})
