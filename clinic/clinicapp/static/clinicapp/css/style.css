@@ -156,7 +156,6 @@ nav ul li a{
     }
 
     #check:checked ~ nav ul{
-    #check:checked ~ nav ul{
         left: 0;
     }
 }
