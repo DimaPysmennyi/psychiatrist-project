@@ -10,24 +10,31 @@
 </head>
 <body>
     {% block content %}
+    <div class="container">
         <h1 class="contact-h1">Контактна інформація</h1>
-        <div class="img-div">
-            <img class= "contact-img" id = "contact-img1" src="{% static 'clinicapp/images/IMG_6303.JPG' %}" alt="">
-            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_8420.JPG' %}" alt="">
-            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_6344.JPG' %}" alt="">
-            <img class= "contact-img" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">     
-        </div>
+        <div class="row mx-auto align-items-center">
+            <div class="col justify-content-center text-center col-12 col-lg-6">
+                <img class= "contact-img img-thumbnail " src="{% static 'clinicapp/images/IMG_6344.JPG' %}" alt="">
+            </div>
+            <div class="col text-center col-12 col-lg-6">
 
-        <div class="icons">
-            <a href="https://www.instagram.com/yaroslava_timchenko/?igsh=MTNiOXR2cndtejQ3cA%3D%3D"><img class= "logo-app"  src="{% static 'clinicapp/images/icons8-instagram.svg' %}" alt=""></a>
-            <a href="https://www.facebook.com/Yaroslava.Tymchenko5"><img class= "logo-app" src="{% static 'clinicapp/images/icons8-facebook.svg' %}" alt=""></a>
-            <a href="https://t.me/yaroslava_psiholog">
-                <img id="tg-logo" class="logo-app" src="{% static 'clinicapp/images/Telegram_logo.svg.png' %}" alt="">
-            </a> 
-        </div>
+        
+                <h2 class="contact-h2">ФОП Тимченко Ярослава  В'ячеславовна</h2>
+                <p class="contact-p">ЄДРПОУ: 2976901929</p>
+                <p class="contact-p">тел: +380981607852</p>
+                <p class="contact-p">тел: +380506839151</p>
+                <p class="contact-p">м. Дніпро</p>
 
-        <p class="contact-p">ФОП Тимченко Ярослава  Вячеславовна <br>ЄДРПОУ: 2976901929</p>
-        <p class="contact-p">тел: +380981607852<br>+380506839151</p>
+                <div class="icons">
+                    <a href="https://www.instagram.com/yaroslava_timchenko?igsh=MTNiOXR2cndtejQ3cA==" id="inst"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/Yaroslava.Tymchenko5" id="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://t.me/yaroslava_psiholog" id="telegram"><i class="bi bi-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     {% endblock %}
 </body>

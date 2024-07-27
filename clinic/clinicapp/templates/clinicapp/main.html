@@ -13,15 +13,18 @@
 </head>
 <body>
     {% block content %}
-        <div class="main-div container justify-content-center container-fluid">
-            <div class="row align-items-center mx-auto">
-                <div class="col col-12 col-lg-6">
+        <div class="main-div container container-fluid">
+            <div class="row mx-auto">
+                <div class="col col-12 col-lg-6 d-flex justify-content-space-between">
                     <div class="text-div">
-                        <h1 class="headline">Вітаю, я Ярослава Тимченко.</h1>
-                        <p class="main-p">Магістр психології.</p>
-                        <p class="main-p">Член НАГТУ (Національної асоціації гештальт терапевтів України).</p>
-                        <p class="main-p">Вища економічна та вища психологічна освіта.</p>
-                        <p class="main-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів.</p>
+                        <h1 class="headline">Вітаю, я Ярослава Тимченко</h1>
+                        <ul>
+                            <li class="main-p">Магістр психології</li>
+                            <li class="main-p">Член НАГТУ (Національної асоціації гештальт терапевтів України)</li>
+                            <li class="main-p">Вища економічна та вища психологічна освіта</li>
+                            <li class="main-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів</li>
+                        </ul>
+                        
                         
                         <div class="buttons">
                             <button type="button" class="find-service" id="find-service">Підібрати сеанс</button>
@@ -30,7 +33,7 @@
                     </div>
                 </div>
                 <div class="col col-12 col-lg-6 text-center img-col">
-                    <img class = "img-main img-fluid" src="{% static 'clinicapp/images/IMG_8420.JPG' %}">
+                    <img class = "img-main img-fluid img-thumbnail" src="{% static 'clinicapp/images/IMG_8420.JPG' %}">
                 </div>
                 
     
@@ -50,6 +53,12 @@
                 </div>
                 <div class="col">
                     <div class="consultations text-center">
+                        <p class="number">> 300+</p>
+                        <p class="number-p">клієнтів</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="consultations text-center">
                         <p class="number">> 3000+</p>
                         <p class="number-p">особистих консультацій</p>
                     </div>
@@ -59,30 +68,38 @@
         </div>
         <hr>
         <div class="about-me-div container">
+            <h2 class="exp-h2">Про мене</p>
             <div class="row">
                 <div class="col col-12 col-lg-6">
-                    <p class="about-me-p">Про мене</p>
-                    <h3 class="exp-h3">Мені 43 роки, я мама 14-річного сина.</h3>
-                    <img class="img" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
+                    <img class="img img-thumbnail" src="{% static 'clinicapp/images/IMG_6346.JPG' %}" alt="">
                 </div>
                 <div class="col about-text">
-                    <p>Вітаю, Я Ярослава Тимченко - магістр психології. Член НАДТУ (Національної асоціації гештальт терапевтів України).</p>
-                    <p>У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів. <br>Маю вищу економічну та вищу психологічну освіту.  <br>До вивчення психології я прийшла з чітким розумінням того, що я успішна, коли допомагаю іншим. <br>Я навчилася розуміти і розрізняти, що для мене є цінним і важливим. <br>Навчилася відпускати те, що вже втратило актуальність, і вибирати те, до чого тягнеться моя душа і те, чого хоче моє серце, а ще я навчилася вибирати себе, бо дуже старанно працювала над своєю самооцінкою. <br>І сьогодні я допомагаю впоратися з різними проблемами та складнощами своїм клієнтам.</p>
+                    <ul>
+                        <li class="about-p">Вітаю, Я Ярослава Тимченко - магістр психології</li>
+                        <li class="about-p">Член НАДТУ (Національної асоціації гештальт терапевтів України)</li>
+                        <li class="about-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів. 
+                        <li class="about-p">Маю вищу економічну та вищу психологічну освіту. </li>
+                        <li class="about-p">До вивчення психології я прийшла з чітким розумінням того, що я успішна, коли допомагаю іншим</li>
+                        <li class="about-p">Я навчилася розуміти і розрізняти, що для мене є цінним і важливим</li>
+                        <li class="about-p">Навчилася відпускати те, що вже втратило актуальність, і вибирати те, до чого тягнеться моя душа і те, чого хоче моє серце, а ще я навчилася вибирати себе, бо дуже старанно працювала над своєю самооцінкою</li> 
+                        <li class="about-p">І сьогодні я допомагаю впоратися з різними проблемами та складнощами своїм клієнтам</li>
+                    </ul>
+                    <p class="about-me-p2">Детальніше про мій шлях можна дізнатися <a href="{% url 'about' %}"><b>тут</b></a></p>
                 </div>
-                <p class="about-me-p2">Детальніше про мій шлях можна дізнатися <a href="{% url 'about' %}">тут</a></p>
-                <hr>
             </div>
         </div>
+        <hr>
 
         
 
-        <div class="goal-div">
-            <h2 class="goal-h2">Моя ціль</h2>
-            <p class="goal-p">Целью своей работы я считаю способствовать тому, чтобы человек научился чувствовать свои потребности осозновать свои истинные желания, познавал себя и в результате этого, жил в гармонии с собой и окружающими.</p>
-            <a href="{% url 'form' %}">
-                <button type="button" class="goal-button">Записатися на прийом</button>
-            </a>
-
+        <div class="goal-div container">
+            <div class="row mx-auto">
+                <h2 class="goal-h2">Моя ціль</h2>
+                <p class="goal-p">Метою своєї роботи я вважаю сприяти тому, щоб людина навчилася відчувати свої потреби усвідомити свої справжні бажання, пізнавала себе і в результаті цього жила в гармонії з собою і оточуючими</p>
+                <a href="{% url 'form' %}">
+                    <button type="button" class="goal-button">Записатися на консультацію</button>
+                </a>
+            </div>
         </div>
     {% endblock %}
 </body>

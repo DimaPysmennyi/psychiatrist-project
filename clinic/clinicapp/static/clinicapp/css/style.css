@@ -27,6 +27,7 @@ nav{
     background-color: #faf5f5;
     color: #4e574b;
     width: 100%;
+    padding: 0 100px 0 100px;
     height: 150px;
     z-index: 999;
     font-family: 'Krub';
@@ -34,7 +35,7 @@ nav{
 
 nav .logo{
     line-height: 150px;
-    padding: 0 100px;
+    /* padding: 0 100px; */
     /* font-weight: bold; */
     font-size: 32px;
     text-wrap: nowrap;
@@ -53,13 +54,13 @@ nav ul li a:hover{
 nav ul{
     list-style: none;
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 nav ul li{
     display: inline-block;
     line-height: 150px;
-    margin: 0 5px;
+    margin-left: 5px;
 }
 
 nav ul li a{
@@ -73,7 +74,7 @@ nav ul li a{
     color:#4e574b;
     float: right;
     line-height: 150px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     cursor: pointer;
     display: none;
 }
@@ -85,7 +86,7 @@ nav ul li a{
 @media (max-width: 1144px){
     nav .logo{
         font-size: 32px;
-        padding-left: 50px;
+        /* padding-left: 50px; */
     }
 
 
@@ -122,6 +123,11 @@ nav ul li a{
         display: block;
     }
 
+    nav{
+        padding: 0 20px 0 20px;
+        justify-content: center;
+    }
+
     nav ul{
         position: fixed;
         width: 100%;
@@ -130,7 +136,7 @@ nav ul li a{
         top: 150px;
         left: -100%;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
     }
 
     .footer-nav{
@@ -147,7 +153,6 @@ nav ul li a{
 
     nav ul li{
         display: block;
-        
     }
 
     nav ul li a{
@@ -155,7 +160,7 @@ nav ul li a{
         color: #faf5f5;
     }
 
-    #check:checked ~ nav ul{
+    .checked ~ .nav-ul{
         left: 0;
     }
 }
@@ -199,20 +204,20 @@ nav ul li a{
 }
 
 .img-main{
-    height: 500px;
+    height: 800px;
     float: right;
 }
 
 .main-p{
     font-family: 'Krub';
-    font-size: 20px;
+    font-size: 24px;
     font-style: italic;
     /* font-weight: 200; */
 
 }
 
 .main-div{
-    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .exp-h2{
@@ -247,17 +252,14 @@ nav ul li a{
     display: flex;
     width: 100%;
     justify-content: center;
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Krub';
+    /* margin-bottom: 20px;  */
 
-}
-
-.about-me-div p{
-    font-size: 20px;
 }
 
 .img{
-    height: 300px;
+    height: 800px;
 }
 
 .exp-h3{
@@ -268,11 +270,12 @@ nav ul li a{
 
 .about-me-p{
     text-align: none;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .about-me-p2{
-    font-size: 32px;
+    font-size: 24px;
+    margin-top: 50px;
     font-style: italic;
 }
 
@@ -358,7 +361,7 @@ nav ul li a{
 
 h2{
     font-family: 'Krub';
-    text-align: center;
+    /* text-align: center; */
 }
 
 .container-row{
@@ -367,7 +370,7 @@ h2{
 
 .path-p{
     font-family: 'Krub';
-    font-size: 28px;
+    font-size: 24px;
     text-align: center
 }
 
@@ -406,6 +409,10 @@ h2{
 
 form{
     margin: auto;
+}
+
+.form-h2{
+    text-align: center;
 }
 
 .input{
@@ -463,16 +470,17 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     width: 100%;
     /* height: 500px; */
-    padding:20px;
+    /* padding: 20px; */
 }
 
 .goal-h2{
     font-family: 'Krub';
+    text-align: center;
     font-size: 40px;
-    font-weight: 500;
+    font-style: italic;
 }
 
 .goal-p{
@@ -486,14 +494,12 @@ form{
 }
 
 .goal-button{
-    /* width: 130%; */
     height: 70px;
     padding: 0 35px 0 35px;
     outline: none;
     border: none;
     border-radius: 5px;
-    /* font-family: "Krub"; */
-    /* font-weight: 500; */
+    font-family: "Krub";
     color: white;
     font-size: 24px;
     background-color: #678b5a;
@@ -537,8 +543,12 @@ form{
     font-size: 48px;
 }
 
+.contact-h2{
+    margin-bottom: 20px;
+}
+
 .contact-p{
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Krub';
     font-size: 24px;
 }
@@ -551,8 +561,8 @@ form{
 }
 
 .contact-img{
-    width: 220px;
-    height: 340px;
+    /* width: 220px; */
+    height: 500px;
 }
 
 #contact-img1{
@@ -639,8 +649,14 @@ form{
 }
 
 .about-p{
-    font-size: 18px;
+    text-align: none;
+    font-size: 24px;
+    margin-top: 20px;
     font-family: 'Krub';
+}
+
+.about-p-continued{
+    text-align: center;
 }
 
 .img-about{
@@ -678,33 +694,36 @@ footer .social{
 .footer-nav{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     list-style: none;
 }
 
-footer .logo{
+.footer-logo{
     display: flex;
     justify-content: center;
-    text-align: center;
+    
+    /* font-size: 2em;
+    */
+}
+
+.footer-logo .logo{
     text-decoration: none;
     color: #faf5f5;
-    font-size: 2em;
+    font-size: 32px;
+    text-align: center;
 }
 
 .footer-nav li a{
+    font-family: 'Krub';
     text-decoration: none;
     text-align: center;
     margin: 20px;
+    font-size: 24px;
     color: #faf5f5;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     transition: 0.5s;
 }
 
-.footer-nav li{
-    /* display: flex; */
-    /* justify-content: center; */
-    text-align: center;
-}
 
 .footer-nav li a:hover{
     opacity: 0.7;
@@ -713,45 +732,51 @@ footer .logo{
 
 footer .social a{
     text-decoration: none;
-    padding: 10px;
+    /* padding: 10px; */
+    /* padding: 5px 5px 5px 5px; */
     width: 50px;
     margin: 10px;
     text-align: center;
-    background-color: #faf5f5;
+    /* background-color: #faf5f5; */
     border-radius: 5px;
     transition: 0.3s;
 }
 
 footer .social a i{
-    font-size: 2em;
-    color: #374f3d
-}
-
-#inst:hover{
-    background-color: #374f3d;
-    /* color: #faf5f5; */
+    font-size: 40px;
+    color: #faf5f5;
+    transition: all ease 0.3s;
 }
 
 #inst:hover i{
-    color: #faf5f5;
-}
-
-#facebook:hover{
-    background-color: #374f3d;
-    color: #faf5f5;
+    /* background-color: #faf5f5; */
+    /* color: #374f3d; */
+    opacity: 0.7;
 }
 
 #facebook:hover i{
-    color: #faf5f5;
+    opacity: 0.7;
+}
+
+#telegram:hover i{
+    opacity: 0.7;
+}
+
+.services-div{
+    padding-top: 20px;
 }
 
 .img-consult{
-    height: 500px;
+    height: 550px;
+}
+
+.img-button{
+    gap: 10px;
 }
 
 .consult-h2{
     text-align: center;
-    font-style: 40px;
+    font-style: 32px;
     font-family: 'Krub';
     font-style: italic;
 }
@@ -767,22 +792,24 @@ footer .social a i{
     border-right: 1px
 }
 
-ul{
+/* ul{
     font-family: 'Krub';
     font-size: 18px;
-}
+} */
 
 .consult-ul{
-    font-size: 20px;
-    list-style-image: url("../images/iconmonstr-check-mark-5.svg");
+    font-size: 24px;
+    font-family: 'Krub';
 }
 
-
+.consult-theme{
+    list-style-image: url("../images/iconmonstr-check-mark-5.svg");
+}
 
 .consult-p{
     text-align: center;
     font-family: 'Krub';
-    font-size: 18px
+    font-size: 24px
 }
 
 /* .img-couple{
@@ -790,7 +817,7 @@ ul{
 } */
 
 .couple-p{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .img-icon{
@@ -810,15 +837,12 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px
 }
 
-.logo-app{
-    width: 50px;
-    height: 50px;
+.icons a{
+    font-size: 48px;
+    color: #4e574b;
+    transition: all ease 0.3s;
 }
 
-#tg-logo{
-    width: 40px;
-    height: 40px;
-    margin-left: 5px
-}
