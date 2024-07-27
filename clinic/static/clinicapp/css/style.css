@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    background-color: #faf5f5;
+    color: #4e574b;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+nav{ 
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    top: 0;
+    background-color: #faf5f5;
+    color: #4e574b;
+    width: 100%;
+    height: 150px;
+    z-index: 999;
+    font-family: 'Krub';
+}
+
+nav .logo{
+    line-height: 150px;
+    padding: 0 100px;
+    /* font-weight: bold; */
+    font-size: 32px;
+    text-wrap: nowrap;
+}
+
+nav a{
+    text-decoration: none;
+    color: #4e574b;
+}
+
+nav ul li a:hover{
+    color: #8B8B8B;
+    transition: all 0.5s ease;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 150px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    text-transform: uppercase;
+    padding: 7 13px;
+    font-size: 24px;    
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#4e574b;
+    float: right;
+    line-height: 150px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1144px){
+    nav .logo{
+        font-size: 32px;
+        padding-left: 50px;
+    }
+
+
+
+
+
+    .text-div{
+        text-align: center;
+    }
+
+    .buttons{
+        align-items: center;
+        gap: 5px;
+    }
+
+    .img-col{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .img-main{
+        float: none;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px){
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #374f3d;
+        top: 150px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .social{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    nav ul li{
+        display: block;
+        
+    }
+
+    nav ul li a{
+        font-size: 24px;
+        color: #faf5f5;
+    }
+
+    #check:checked ~ nav ul{
+        left: 0;
+    }
+}
+
+@media (max-width: 787px) {
+    .experience{
+        width: 100%
+    }
+
+    /* .img-couple{
+        height: 200px;
+    } */
+
+    nav .logo{
+        font-size: 24px;
+    }
+
+    footer a{
+        font-size: 16px;
+    }
+
+    footer a{
+        font-size: 16px;
+    }
+}
+
+.socials {
+    border: 2px solid #4e574b;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 32px;
+}
+
+.faq-h1{
+    text-align: center;
+}
+
+.img-col{
+    clear: both;
+}
+
+.img-main{
+    height: 500px;
+    float: right;
+}
+
+.main-p{
+    font-family: 'Krub';
+    font-size: 20px;
+    font-style: italic;
+    /* font-weight: 200; */
+
+}
+
+.main-div{
+    margin: 0 auto;
+}
+
+.exp-h2{
+    font-family: 'Krub';
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.numbers-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.number{
+    font-family: 'Krub';
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+}
+
+.number-p{
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.about-me-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Krub';
+
+}
+
+.about-me-div p{
+    font-size: 20px;
+}
+
+.img{
+    height: 300px;
+}
+
+.exp-h3{
+    font-size: 32px;
+    font-style: italic;
+    
+}
+
+.about-me-p{
+    text-align: none;
+    font-size: 20px;
+}
+
+.about-me-p2{
+    font-size: 32px;
+    font-style: italic;
+}
+
+.about-me-p2 a{
+    color:#4e574b;
+}
+
+.text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline{
+    font-family: 'Krub';
+    /* font-weight: 700; */
+    font-size: 36px;
+    font-style: italic;
+}
+
+.accordion{
+    background-color:#FFFCE1;
+}
+
+
+.find-service{
+    width: 300px;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: "Krub"; 
+    font-weight: 500;
+    font-size: 24px;
+    color: #faf5f5;
+    background-color: #678b5a;
+    transition: background-color 0.2s;
+}
+
+.find-service:hover{
+    background-color: #9dc48f;
+}
+
+
+
+.path-history-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-color: #FFEFB7;
+    align-items: center;
+    justify-content: center;
+}
+
+.path-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-color: #fff8de;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding-bottom: 10px;
+}
+
+.path-container{
+    /* width: 100%; */
+    height: 100%;
+}
+
+.block{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: #FFF9C8; */
+    flex-direction: column;
+    height: 100%;
+}
+
+h2{
+    font-family: 'Krub';
+    text-align: center;
+}
+
+.container-row{
+    width: 100%;
+}
+
+.path-p{
+    font-family: 'Krub';
+    font-size: 28px;
+    text-align: center
+}
+
+.path-p-2{
+    font-family: 'Krub';
+    font-size: 24px;
+    text-align: center;
+}
+
+.block-path{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDAA3;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.errorlist li {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: red;
+    font-family: 'Krub';
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form{
+    margin: auto;
+}
+
+.input{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-family: 'Krub';
+    outline: none;
+    /* border: 1px black solid; */
+    border-width: 0px;
+    width: 100%;
+    height: 60px;
+    padding: 10px 50px 10px 10px;
+    font-size: 24px;
+}
+
+.textarea{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-family: 'Krub';
+    outline: none;
+    /* border: 1px black solid; */
+    border-width: 0px;
+    /* width: 600px; */
+    width: 100%;
+    height: 200px;
+    padding: 10px 50px 10px 10px;
+    font-size: 24px;
+    resize: none;
+}
+
+#result-text{
+    width: 100%;
+    text-align: center;
+}
+
+.btn-form{
+    background-color: #678b5a;
+    font-family: 'Krub';
+    font-size: 32px;
+    color: #faf5f5;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    border-width: 0px;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+.btn-form:hover{
+    background-color: #73a261;
+}
+
+.goal-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    /* height: 500px; */
+    padding:20px;
+}
+
+.goal-h2{
+    font-family: 'Krub';
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.goal-p{
+    font-family: 'Krub';
+    font-size: 24px;
+    text-align: center;
+}
+
+.goal-div a{
+    text-align: center;
+}
+
+.goal-button{
+    /* width: 130%; */
+    height: 70px;
+    padding: 0 35px 0 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    /* font-family: "Krub"; */
+    /* font-weight: 500; */
+    color: white;
+    font-size: 24px;
+    background-color: #678b5a;
+    transition: all 0.2s;
+}
+
+.goal-button:hover{
+    background-color: #9dc48f;
+}
+
+.accordion-div{
+    display: flex;
+    justify-content: center;
+}
+
+.accordion{
+    width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+
+.accordion-text{
+    font-family: 'Krub';
+    font-size: 20px;
+}
+
+.accordion-button{
+    font-size: 32px;
+}
+
+.button-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-h1{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 48px;
+}
+
+.contact-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.img-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.contact-img{
+    width: 220px;
+    height: 340px;
+}
+
+#contact-img1{
+    width: 510px;
+}
+
+.service-h1{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.service-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.card{
+    width: 350px;
+}
+
+.card-title{
+    text-align: center;
+    font-family: 'Krub';
+}
+
+.btn{
+    margin: auto;
+}
+
+.card-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.therapy-h1, .consultation-h1{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.therapy-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 24px;
+}
+
+.consultation-h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.consultation-info{
+    background-color: white;
+    border: 1px solid black;
+    width: 1000px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.consultation-p{
+    font-family: 'Krub';
+    font-size: 24px;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* height: 150px; */
+}
+
+.about-h1{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 40px;
+}
+
+.about-p{
+    font-size: 18px;
+    font-family: 'Krub';
+}
+
+.img-about{
+    height: auto;
+}
+
+br{
+    display: block;
+    content: "";
+    margin-top: 20px;
+}
+
+footer{
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+    padding: 50px;
+    background-color: #374f3d;
+    margin-top: 50px;
+    position: sticky
+    /* text-align: center; */
+}
+
+.footer-logo .logo{
+    font-family: 'Krub';
+    text-align: center;
+    font-size: 32px;
+}
+
+footer .social{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+footer .logo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #faf5f5;
+    font-size: 2em;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    text-align: center;
+    margin: 20px;
+    color: #faf5f5;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+.footer-nav li{
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.footer-nav li a:hover{
+    opacity: 0.7;
+}
+
+
+footer .social a{
+    text-decoration: none;
+    padding: 10px;
+    width: 50px;
+    margin: 10px;
+    text-align: center;
+    background-color: #faf5f5;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+footer .social a i{
+    font-size: 2em;
+    color: #374f3d
+}
+
+#inst:hover{
+    background-color: #374f3d;
+    /* color: #faf5f5; */
+}
+
+#inst:hover i{
+    color: #faf5f5;
+}
+
+#facebook:hover{
+    background-color: #374f3d;
+    color: #faf5f5;
+}
+
+#facebook:hover i{
+    color: #faf5f5;
+}
+
+.img-consult{
+    height: 500px;
+}
+
+.consult-h2{
+    text-align: center;
+    font-style: 40px;
+    font-family: 'Krub';
+    font-style: italic;
+}
+
+.consult-h3{
+    text-align: center;
+    font-style: 24px;
+    font-family: 'Krub';
+    font-style: italic;
+}
+
+.consult-col1{
+    border-right: 1px
+}
+
+ul{
+    font-family: 'Krub';
+    font-size: 18px;
+}
+
+.consult-ul{
+    font-size: 20px;
+    list-style-image: url("../images/iconmonstr-check-mark-5.svg");
+}
+
+
+
+.consult-p{
+    text-align: center;
+    font-family: 'Krub';
+    font-size: 18px
+}
+
+/* .img-couple{
+    height: 400px;
+} */
+
+.couple-p{
+    font-size: 20px;
+}
+
+.img-icon{
+    width: 75px;
+    height: 75px;
+}
+
+.info{
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-app{
+    width: 50px;
+    height: 50px;
+}
+
+#tg-logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px
+}
