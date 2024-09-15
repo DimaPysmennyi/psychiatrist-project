@@ -62,16 +62,17 @@ def handle_form_request(request):
         form = UserForm(request.POST)
         # Якщо форма правильно заповнена:
         if form.is_valid():
+            user = User.objects.create(**form.cleaned_data)
             # Заносимо дані користувача у модель User
             form = UserForm(request.POST, instance=user)
 
             if validate_email_address(form.data["email"]) == False:
-                return JsonResponse({"message": "Не дійсний e-mail!"})
+                return JsonResponse({"message": "Не дійсний e-mail!", "status": 403})
 
-            if validate_email_address(form.data["phone"]) == False:
-                return JsonResponse({"message": "Не дійсний номер телефону!"})
+            if validate_phone_number(form.data["phone"]) == False:
+                return JsonResponse({"message": "Не дійсний номер телефону!", "status": 403})
 
-            user = User.objects.create(**form.cleaned_data)
+            
 
             # Зберігаємо форму 
             form.save()

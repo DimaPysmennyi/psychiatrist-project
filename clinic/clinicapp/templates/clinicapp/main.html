@@ -25,10 +25,16 @@
                             <li class="main-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів</li>
                         </ul>
                         
+                        <a href=""></a>
                         
                         <div class="buttons">
-                            <button type="button" class="find-service" id="find-service">Підібрати сеанс</button>
-                            <button type="button" class="find-service" id="find-about">Дізнатися про мене</button>
+                            <a href="{% url 'form' %}">
+                                <button type="button" class="find-service" id="find-service">Підібрати сеанс</button>
+                            </a>
+                            <a href="{% url 'about' %}">
+                                <button type="button" class="find-service" id="find-about">Дізнатися про мене</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -76,7 +82,7 @@
                 <div class="col about-text">
                     <ul>
                         <li class="about-p">Вітаю, Я Ярослава Тимченко - магістр психології</li>
-                        <li class="about-p">Член НАДТУ (Національної асоціації гештальт терапевтів України)</li>
+                        <li class="about-p">Член НАГТУ (Національної асоціації гештальт терапевтів України)</li>
                         <li class="about-p">У терапії, тренінгах та консультуванні я більше 8 років, до цього я працювала у фінансовій сфері та у сфері продажів. 
                         <li class="about-p">Маю вищу економічну та вищу психологічну освіту. </li>
                         <li class="about-p">До вивчення психології я прийшла з чітким розумінням того, що я успішна, коли допомагаю іншим</li>
